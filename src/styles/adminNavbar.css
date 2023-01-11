@@ -1,7 +1,20 @@
-.navContent{
-    display: flex;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
+.adminNav{
     font: white;
+    background-color: bisque;
+    margin-bottom: 300px;
 }
+.nav_links{
+    display: flex;
+    margin-left: 350px;
+
+}
+.navbar{
+    display: flex;
+    margin-left: 100px;
+
+}
+.content{
+    margin-left: 300px;
+    text-align: center;
+}
+

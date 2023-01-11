@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/addBook.css"
 const AddBook = () => {
     //title,categories,authors,pageCount,shortDescription,longDescription,thumbnailUrl
     let [title, setTitle] = useState("")

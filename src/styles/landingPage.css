@@ -1,5 +1,5 @@
 .selectlogin h1{
-    color: rgb(29, 28, 26);
+    color:black;
     text-align: center;
     font: italic;
 }
@@ -11,13 +11,23 @@
     margin-bottom: 10px;
 }
 .landingpage{
-    height: 350px;
-    width: 490px;
+    background-image: url(https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    
+}
+.selectlogin{
+    height: 380px;
+    width: 500px;
     border: 3px solid rgb(33, 43, 13);
     background-color: #cab6b6;
     margin: auto;
     text-align: center;
     border-radius: 10px;
+    background-image:url(https://img.lovepik.com/photo/45010/2354.jpg_wh300.jpg);
+    background-position: center;
 }
 .button{
     display: flex;
@@ -29,9 +39,18 @@
 }
 .btn1{
     margin-left: 50px;
+    
+}
+.btn1 a{
+    text-decoration: none;
+
 }
 .btn2{
     margin-left: 200px;
+    
+}
+.btn2 a{
+    text-decoration: none;   
 }
 
 

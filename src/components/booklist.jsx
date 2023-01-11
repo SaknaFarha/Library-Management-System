@@ -1,12 +1,16 @@
 import { useState,useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 import '../styles/booklist.css'
 import ReadBook from "./readBook";
 const BookList = () => {
     let[books,setBooks] = useState([])
+
+    //to fetch the route value(used fetch the entire data.In use params it just take only 1 paramaetre)
+    let location = useLocation()
+
     useEffect(()=>{
         let fetchData = async ()=>{
-            let response = await fetch("http://localhost:4000/books")
+            let response = await fetch('http://localhost:4000/books')
             let data = await response.json()
             setBooks(data)
         }
@@ -23,7 +27,12 @@ const BookList = () => {
     }
     let navigate = useNavigate();
     let read=(id)=>{
-       navigate(`/admin/book-list/${id}`)
+       if(location.pathname == "/admin/book-list"){
+        navigate(`/admin/book-list/${id}`)
+       }
+       else{
+        navigate(`/user/book-list/${id}`)
+       }
     }
     return ( 
         <div className="bookList">
@@ -40,7 +49,7 @@ const BookList = () => {
                         <h6>Category : {data.categories.toString()}</h6>
                         <h6>Page Count : {data.pagecount} </h6>
                         <button onClick={()=>read(data.id)}>Read More</button>
-                        <button onClick={()=>handleRemove(data.id,data.title)}>Remove</button>
+                        {location.pathname == "/admin/book-list" && <button onClick={()=>handleRemove(data.id,data.title)}>Remove</button>}
 
                     </div>
                     </div>

@@ -21,7 +21,7 @@ const AdminLogin = () => {
     }
     return ( 
         <div className="adminlogin">
-            <div className="form card">
+            <div className="form_card">
                 <h1>Login as Admin</h1>
                 <div className="form_input">
                     <form action="" onSubmit={login}>
